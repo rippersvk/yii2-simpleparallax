@@ -1,0 +1,22 @@
+{
+    "name": "icesign/yii2-simpleparallax",
+    "description": "Wrapper for Yii2 from simplePARALLAX.js by https://github.com/geosigno",
+    "type": "yii2-extension",
+    "keywords": ["yii2","widget","parallax","extension","simpleparallax"],
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Bc. Michal Ripňák - ICesign Studios",
+            "email": "ripper@icesign.eu"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "icesign\\simpleparallax\\": "./src"
+        }
+    }
+}
