@@ -1,6 +1,6 @@
 <?php
 
-namespace icesign\simpleparallax;
+namespace icesign\simpleparallax\assets;
 
 use yii\web\AssetBundle;
 

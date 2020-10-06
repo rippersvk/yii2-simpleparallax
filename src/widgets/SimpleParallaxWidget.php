@@ -5,7 +5,7 @@ namespace icesign\simpleparallax\widgets;
 use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
-use icesign\simpleparallax\SimpleParallaxAssetMinBundle;
+use icesign\simpleparallax\assets\SimpleParallaxMinAssetBundle;
 
 class SimpleParallaxWidget extends Widget
 {
@@ -59,7 +59,7 @@ class SimpleParallaxWidget extends Widget
     public function registerAssets()
     {
         $view = $this->getView();
-        SimpleParallaxAssetMinBundle::register($view);
+        SimpleParallaxMinAssetBundle::register($view);
     }
 
     /**
@@ -67,8 +67,11 @@ class SimpleParallaxWidget extends Widget
      */
     public function run()
     {
+        $view = $this->getView();
         $view->registerJs("
+        /* simpleparallax */
         var images = document.querySelectorAll('".$this->selector."');
+        new simpleParallax(images);
         new simpleParallax(images, {
             delay: ".$this->delay.",
             orientation: '".$this->orientation."',
